@@ -1,0 +1,115 @@
+.header {
+  position: relative;
+  //   background-color: red;
+  // height: 100svh;
+  // height: fit-content;
+  padding: 4.5rem 0 6rem 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  //   background-image: url("../../img/header-bg.webm");
+
+  &__bg {
+    // overflow: hidden;
+    position: absolute;
+    // background-color: green;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    &.bottom-rounded {
+      video {
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+    }
+    filter: brightness(0.3);
+    video {
+      position: inherit;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__box {
+    // background-color: green;
+    height: 100%;
+    // padding-top: 6rem;
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10rem;
+
+    padding-top: 6rem;
+    @include respond(tab-land) {
+      grid-template-columns: 1fr;
+      gap: 5rem;
+    }
+  }
+
+  &__info {
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.5rem;
+
+    h1 {
+      @include respond(tab-land) {
+        font-size: 45px;
+        line-height: 60px;
+      }
+    }
+
+    p {
+      line-height: 150%;
+    }
+  }
+
+  &__thoughts {
+    color: $color-white;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: center;
+
+    &__images {
+      display: flex;
+      padding: 10px;
+      width: fit-content;
+      border-radius: 100px;
+      border: 2px solid $color-primary;
+      // background-color: yellow;
+      img {
+        &:not(:first-child) {
+          margin-left: -20px;
+        }
+      }
+    }
+
+    &__info {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-left: 20px;
+
+      &-1 {
+        display: flex;
+        align-items: center;
+        height: fit-content;
+        gap: 10px;
+        margin-bottom: 8px;
+
+        span {
+          height: 2.7rem;
+          display: flex;
+          align-items: center;
+          padding-right: 10px;
+          border-right: 3px solid $color-white;
+        }
+      }
+    }
+  }
+}

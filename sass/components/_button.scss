@@ -1,0 +1,225 @@
+.btn {
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 100%;
+  font-style: normal;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.3s;
+  &_rectangle {
+    border-radius: 10px;
+  }
+  &_rounded {
+    border-radius: 100px;
+  }
+
+  &_color {
+    &_white {
+      color: $color-primary;
+      background-color: $color-white;
+    }
+    &_blue {
+      color: $color-white;
+      background-color: $color-primary;
+    }
+    &_blur {
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+    }
+    &_transparrent {
+      background-color: transparent;
+      border: 1px solid $color-white;
+    }
+  }
+
+  &_of {
+    &_navbar {
+      padding: 14px 25px 14px 20px;
+      font-size: 18px;
+      font-weight: 500;
+
+      text-transform: uppercase;
+
+      &__img {
+        margin-right: 8px;
+      }
+
+      @media (max-width: 1291px) {
+        display: none;
+      }
+    }
+
+    &_navbar-mobile {
+      width: 50px;
+      height: 50px;
+      display: none;
+      @media (max-width: 1007px) {
+        display: inline-block;
+      }
+
+      &__call {
+        @media (max-width: 1291px) {
+          display: inline-block;
+        }
+      }
+    }
+
+    &_form {
+      margin-top: 4rem;
+      padding: 17px;
+      // text-align: center;
+
+      &-outside {
+        position: absolute;
+        padding: 20px;
+        top: 100%;
+        right: -40%;
+        overflow: visible;
+
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: #ff8101;
+          // background-color: red;
+          border-radius: 50%;
+          opacity: 0.2;
+          height: 70px;
+          width: 70px;
+          transition: all 0.3s;
+          // height: 120%;
+          // width: 120%;
+
+          z-index: -1;
+        }
+
+        &:hover:before {
+          transform: scale(1.2);
+        }
+
+        @media (max-width: 1657px) {
+          top: 60%;
+          right: -10px;
+        }
+        background: linear-gradient(180deg, #ff8101 0%, #ffd976 100%);
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    &_about-gallery {
+      padding: 2.2rem 9.3rem;
+    }
+
+    &_slider {
+      height: 60px;
+      width: 60px;
+      padding: 18px;
+
+      &_color-white {
+        i {
+          color: $color-white;
+        }
+
+        &:hover {
+          background-color: $color-white;
+
+          & i {
+            color: $color-primary;
+          }
+        }
+      }
+      &_color-blue {
+        border-color: $color-primary;
+        i {
+          color: $color-primary;
+        }
+
+        &:hover {
+          background-color: $color-primary;
+
+          & i {
+            color: $color-white;
+          }
+        }
+      }
+    }
+
+    &_service-card {
+      padding: 15px 35px;
+    }
+
+    &_solvings-call {
+      gap: 15px;
+      padding: 8px 28px 8px 8px;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: uppercase;
+
+      & > div {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: $color-primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          height: 22px;
+          width: 22px;
+        }
+      }
+    }
+
+    &_catalog {
+      gap: 15px;
+      padding: 8px 28px 8px 8px;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: uppercase;
+
+      & > div {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: $color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          height: 22px;
+          width: 22px;
+        }
+      }
+    }
+
+    &_discount {
+      padding: 1.9rem 6rem;
+    }
+
+    &_news-card {
+      height: 50px;
+      width: 50px;
+      background-color: #f5f9fe;
+      i {
+        color: $color-primary;
+      }
+      &:hover {
+        background-color: $color-primary;
+        i {
+          color: $color-white;
+        }
+      }
+    }
+  }
+}

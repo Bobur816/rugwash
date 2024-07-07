@@ -1,0 +1,59 @@
+.heading {
+  font-style: normal;
+  &_lg {
+    font-size: 8rem;
+    line-height: 8.8rem;
+  }
+
+  &_md {
+    font-size: 5rem;
+  }
+}
+
+.text_blue {
+  color: $color-primary;
+}
+
+.text_white {
+  color: $color-white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text {
+  &_xlg {
+    font-size: 3.2rem;
+  }
+  &_lg {
+    font-size: 2.4rem;
+  }
+  &_md {
+    font-size: 2rem;
+  }
+  &_sm {
+    font-size: 1.8rem;
+  }
+}
+
+.title {
+  &_lg {
+    font-size: 3.4rem;
+  }
+  &_md {
+    font-size: 2rem;
+  }
+}
+
+.font {
+  &_semibold {
+    font-weight: 600;
+  }
+  &_medium {
+    font-weight: 500;
+  }
+  &_normal {
+    font-weight: 400;
+  }
+}

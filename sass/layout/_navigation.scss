@@ -1,0 +1,51 @@
+.navigation {
+  //   background-color: yellow;
+  &__box {
+    // background-color: orange;
+    max-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    @media (max-width: 1007px) {
+      gap: 0;
+    }
+  }
+
+  &__logo {
+    // background-color: orange;
+    max-height: 100%;
+    // background-color: blue;
+    margin-right: auto;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 4rem;
+    @media (max-width: 1007px) {
+      display: none;
+    }
+
+    &-item {
+      &__link {
+        color: $color-white;
+        text-decoration: none;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+  }
+
+  &__mobile {
+    // background-color: red;
+    display: none;
+    @media (max-width: 1291px) {
+      display: flex;
+    }
+    gap: 10px;
+  }
+}
