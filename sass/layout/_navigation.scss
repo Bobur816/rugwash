@@ -1,7 +1,14 @@
 .navigation {
-  //   background-color: yellow;
+  // background-color: yellow;
+  position: fixed;
+  top: 4.5rem;
+  // padding-top: 45px;
   // position: relative;
+  // position: fixed;
+  width: 100%;
+  // top: -45px;
   z-index: 10;
+  transition: all 0.5s;
 
   &__box {
     // background-color: orange;
@@ -20,6 +27,9 @@
     // background-color: blue;
     margin-right: auto;
     z-index: 10;
+    // width: auto;
+    width: 15rem;
+    transition: all 0.5s;
   }
 
   &__list {
@@ -123,6 +133,21 @@
       @media (max-width: 1007px) {
         display: block;
       }
+    }
+  }
+
+  &-scrolled {
+    position: fixed;
+    top: 0;
+    padding: 1rem 0;
+    background-color: $color-primary;
+    border-bottom: 1px solid #fff;
+
+    .navigation__logo {
+      width: 10rem;
+    }
+    .btn_color_blue {
+      border: 1px solid #fff;
     }
   }
 }

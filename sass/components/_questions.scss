@@ -39,7 +39,7 @@
     &__answer {
       padding: 30px;
 
-      transition: all 0.3s;
+      // transition: all 0.3s;
       font-size: 18px;
       // transform: scaleY(0.5);
       // height: 50%;
@@ -47,15 +47,13 @@
       line-height: 34px; /* 188.889% */
       border: 1px solid $color-primary;
       display: none;
-      height: 0;
-      visibility: hidden;
     }
 
-    &.active &__answer {
-      visibility: visible;
-      height: auto;
-      display: block;
-    }
+    // &.active &__answer {
+    //   visibility: visible;
+    //   height: auto;
+    //   display: block;
+    // }
     &.active &__question__icon i {
       transform: rotate(180deg);
     }
