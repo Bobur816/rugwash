@@ -351,13 +351,6 @@ body {
     width: 100vw;
   }
 }
-@media (min-width: 1008px) {
-  .navigation__list-item__submenu {
-    opacity: 0;
-    transform: translateY(-10px);
-    visibility: hidden;
-  }
-}
 .navigation__list-item__submenu a {
   display: block;
   white-space: nowrap;
@@ -373,13 +366,6 @@ body {
 @media (max-width: 1007px) {
   .navigation__list-item__submenu a {
     text-align: center;
-  }
-}
-@media (min-width: 1008px) {
-  .navigation__list-item:hover .navigation__list-item__submenu {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
   }
 }
 .navigation__list-item.active .navigation__list-item__link i {

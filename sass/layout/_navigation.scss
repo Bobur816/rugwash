@@ -127,11 +127,11 @@
           width: 100vw;
         }
 
-        @media (min-width: 1008px) {
-          opacity: 0;
-          transform: translateY(-10px);
-          visibility: hidden;
-        }
+        // @media (min-width: 1008px) {
+        //   // opacity: 0;
+        //   // transform: translateY(-10px);
+        //   // visibility: hidden;
+        // }
         gap: 15px;
         padding: 30px;
         border-radius: 10px;
@@ -155,13 +155,13 @@
         }
       }
 
-      &:hover &__submenu {
-        @media (min-width: 1008px) {
-          opacity: 1;
-          transform: translateY(0);
-          visibility: visible;
-        }
-      }
+      // &:hover &__submenu {
+      //   @media (min-width: 1008px) {
+      //     opacity: 1;
+      //     transform: translateY(0);
+      //     visibility: visible;
+      //   }
+      // }
 
       // &:hover &__link i {
       //   transform: rotate(180deg);
