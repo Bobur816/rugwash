@@ -44,9 +44,9 @@ $(window).on("load", () => {
     }
   });
 
-  $(".navigation__list-item__link i").click(function (e) {
+  $(".navigation__list-item__link__mobile i").click(function (e) {
     e.preventDefault();
-    $(this).parent().parent().toggleClass("active");
+    $(this).parent().toggleClass("active");
     $(this)
       .parents(".navigation__list-item")
       .find(".navigation__list-item__submenu")
