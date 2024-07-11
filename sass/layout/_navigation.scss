@@ -42,8 +42,10 @@
     @media (max-width: 1007px) {
       top: 0;
       left: 0;
+      height: 70vh;
       // transform: translateX(-100%);
       position: fixed;
+      overflow-y: scroll;
       // background-color: red;
       flex-direction: column;
       animation-name: moveInLeft;
@@ -79,6 +81,14 @@
     }
 
     &-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+
+      @media (max-width: 1007px) {
+        flex-direction: column;
+      }
       &__link {
         color: $color-white;
         text-decoration: none;
@@ -89,6 +99,84 @@
         @media (max-width: 1007px) {
           font-size: 20px;
         }
+        i {
+          margin-left: 15px;
+          transition: all 0.5s;
+          color: $color-white;
+          font-size: 15px;
+          // transform: rotate(180deg);
+        }
+      }
+
+      &__submenu {
+        position: absolute;
+
+        width: fit-content;
+        min-width: 200px;
+        top: 120%;
+        left: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        @media (max-width: 1007px) {
+          position: static;
+          display: none;
+          align-items: center;
+          justify-content: center;
+          width: 100vw;
+        }
+
+        @media (min-width: 1008px) {
+          opacity: 0;
+          transform: translateY(-10px);
+          visibility: hidden;
+        }
+        gap: 15px;
+        padding: 30px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(15px);
+
+        a {
+          display: block;
+          white-space: nowrap;
+          width: 100%;
+          padding: 15px 0;
+          @media (max-width: 1007px) {
+            text-align: center;
+          }
+          text-decoration: none;
+          color: $color-white;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+
+      &:hover &__submenu {
+        @media (min-width: 1008px) {
+          opacity: 1;
+          transform: translateY(0);
+          visibility: visible;
+        }
+      }
+
+      // &:hover &__link i {
+      //   transform: rotate(180deg);
+
+      //   @media (max-width: 1007px) {
+      //     transform: none;
+      //   }
+      // }
+
+      &.active &__submenu {
+        // display: block;
+      }
+
+      &.active &__link i {
+        transform: rotate(180deg);
       }
     }
   }
@@ -148,6 +236,12 @@
     }
     .btn_color_blue {
       border: 1px solid #fff;
+    }
+
+    .navigation__list-item__submenu {
+      @media (min-width: 1008px) {
+        background-color: rgba(0, 163, 255, 0.3);
+      }
     }
   }
 }

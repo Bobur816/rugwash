@@ -43,4 +43,13 @@ $(window).on("load", () => {
       $(this).find(".question__item__answer").slideDown(400);
     }
   });
+
+  $(".navigation__list-item__link i").click(function (e) {
+    e.preventDefault();
+    $(this).parent().parent().toggleClass("active");
+    $(this)
+      .parents(".navigation__list-item")
+      .find(".navigation__list-item__submenu")
+      .slideToggle(400);
+  });
 });
