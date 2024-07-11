@@ -151,8 +151,10 @@
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
+        padding: 30px;
         @media (max-width: 1007px) {
+          padding: 20px;
           position: static;
           display: none;
           align-items: center;
@@ -165,8 +167,6 @@
           transform: translateY(-10px);
           visibility: hidden;
         }
-        gap: 15px;
-        padding: 30px;
         border-radius: 10px;
         background: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(15px);
@@ -175,8 +175,8 @@
           display: block;
           white-space: nowrap;
           width: 100%;
-          padding: 15px 0;
           @media (max-width: 1007px) {
+            padding: 15px 0;
             text-align: center;
           }
           text-decoration: none;

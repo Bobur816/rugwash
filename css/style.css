@@ -366,8 +366,7 @@ body {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  gap: 15px;
+  gap: 20px;
   padding: 30px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.2);
@@ -375,6 +374,7 @@ body {
 }
 @media (max-width: 1007px) {
   .navigation__list-item__submenu {
+    padding: 20px;
     position: static;
     display: none;
     align-items: center;
@@ -393,7 +393,6 @@ body {
   display: block;
   white-space: nowrap;
   width: 100%;
-  padding: 15px 0;
   text-decoration: none;
   color: #fff;
   font-size: 18px;
@@ -403,6 +402,7 @@ body {
 }
 @media (max-width: 1007px) {
   .navigation__list-item__submenu a {
+    padding: 15px 0;
     text-align: center;
   }
 }
